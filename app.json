@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "fiber",
+    "slug": "fiber",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/LoadingIcon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/images/Loading.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/LoadingIcon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
