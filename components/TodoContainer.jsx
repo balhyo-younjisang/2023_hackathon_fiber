@@ -1,22 +1,12 @@
-import { StyleSheet, View } from "react-native";
-import { useState, useEffect } from "react";
-import { getWeatherAndReturnWeatherIconId } from "../apis/weather";
+import { StyleSheet, Text, View } from "react-native";
+import { Todo } from "./Todo";
 
 export const TodoContainer = () => {
-  const [weather, setWeather] = useState("");
-
-  useEffect(() => {
-    setWeather(getWeatherAndReturnWeatherIconId());
-  }, []);
-
-  console.log(weather);
   return (
     <>
       <View style={styles.container}>
-        {/* Weather */}
-        <View></View>
-        {/* Todo */}
-        <View></View>
+        <Text style={styles.containerTitle}>Todo</Text>
+        <Todo />
       </View>
     </>
   );
@@ -25,11 +15,18 @@ export const TodoContainer = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#DADADA",
+    backgroundColor: "#d9b99b",
     width: "80%",
-    height: 300,
+    height: 320,
     marginTop: 100,
     alignSelf: "center",
     borderRadius: 5,
+  },
+
+  containerTitle: {
+    fontFamily: "BlackHanSans",
+    fontSize: 28,
+    alignSelf: "center",
+    margin: 10,
   },
 });

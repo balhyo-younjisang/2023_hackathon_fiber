@@ -1,5 +1,5 @@
 import { ScrollView, StyleSheet, View } from "react-native";
-
+import { WeatherContainer } from "../components/WeatherContainer";
 import { TodoContainer } from "../components/TodoContainer";
 import { Footer } from "../components/Footer";
 
@@ -9,6 +9,7 @@ export const Home = ({ navigation }) => {
       <View style={styles.container}>
         <ScrollView>
           <TodoContainer />
+          <WeatherContainer />
         </ScrollView>
       </View>
       <Footer navigation={navigation} />
