@@ -6,5 +6,6 @@ export const loadingFont = async () => {
   await Font.loadAsync({
     BlackHanSans: require("../assets/fonts/BlackHanSans-Regular.ttf"),
     NanumPen: require("../assets/fonts/NanumPenScript-Regular.ttf"),
+    BlackOpsOne: require("../assets/fonts/BlackOpsOne-Regular.ttf"),
   });
 };

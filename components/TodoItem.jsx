@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     height: 50,
     width: "90%",
-    backgroundColor: "beige",
+    backgroundColor: "#C0C0C0",
     marginTop: 5,
     borderRadius: 5,
     justifyContent: "space-between",
@@ -34,5 +34,6 @@ const styles = StyleSheet.create({
   todo: {
     width: "80%",
     textAlign: "center",
+    color: "black",
   },
 });

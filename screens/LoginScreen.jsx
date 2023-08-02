@@ -61,9 +61,15 @@ const styles = StyleSheet.create({
   },
 
   buttonContainer: {
-    flex: 1,
+    // flex: 1,
+    borderRadius: 5,
+    marginTop: 60,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-around",
+    borderWidth: 1,
+    width: "80%",
+    height: 400,
+    borderColor: "#DADADA",
   },
 
   loginBtn: {

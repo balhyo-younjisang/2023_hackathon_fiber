@@ -9,6 +9,7 @@ import { LoginInput } from "../components/LoginInput";
 export const Join = ({ navigation }) => {
   const [isReady, setIsReady] = useState(false);
   const [inputEmail, handleChangeEmail] = useState("");
+  const [inputName, handleChangeName] = useState("");
   const [inputPassword, handleChangePassword] = useState("");
   const [inputConfirmPassword, handleChangeConfirmPassword] = useState("");
 
@@ -30,6 +31,11 @@ export const Join = ({ navigation }) => {
         <>
           <LoginTitle />
           <View style={styles.buttonContainer}>
+            <LoginInput
+              placeholder="이름을 입력해주세요"
+              onChange={handleChangeName}
+              value={inputName}
+            />
             <LoginInput
               placeholder="이메일을 입력해주세요"
               onChange={handleChangeEmail}

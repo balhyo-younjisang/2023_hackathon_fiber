@@ -18,8 +18,9 @@ export const Todo = () => {
 
   /** Check 아이콘을 눌렀을 때 Todo를 삭제하는 함수 */
   const handleCheckTodo = (todoIdx) => {
-    setTodos((current) => current.filter((todoItem, idx) => idx != todoIdx));
-    storeData("todos", todos);
+    const filterdTodo = todos.filter((todoItem, idx) => idx != todoIdx);
+    setTodos(filterdTodo);
+    storeData("todos", filterdTodo);
   };
 
   useEffect(() => {
@@ -60,12 +61,13 @@ const styles = StyleSheet.create({
   addTodo: {
     height: 50,
     width: "90%",
-    backgroundColor: "beige",
+    backgroundColor: "gray",
     marginTop: 5,
     borderRadius: 5,
     textAlign: "center",
     fontSize: 18,
     marginBottom: 10,
     alignSelf: "center",
+    color: "white",
   },
 });

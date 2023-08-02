@@ -15,7 +15,7 @@ export const TodoContainer = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#d9b99b",
+    backgroundColor: "#DADADA",
     width: "80%",
     height: 320,
     marginTop: 100,
