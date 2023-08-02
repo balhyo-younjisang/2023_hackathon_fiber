@@ -10,9 +10,10 @@ export const Todo = () => {
 
   /** 완료 버튼을 눌렀을 때 Todo를 추가하는 함수 */
   const handleSubmitTodo = () => {
-    setTodos([todoInput, ...todos]);
-    storeData("todos", todos);
+    const updateTodos = [...todos, todoInput];
 
+    setTodos(updateTodos);
+    storeData("todos", updateTodos);
     setTodoInput("");
   };
 
@@ -26,7 +27,7 @@ export const Todo = () => {
   useEffect(() => {
     const getTodosFromStorage = async () => {
       const currentTodos = await getData("todos");
-      setTodos(currentTodos || []);
+      setTodos(Object.values(currentTodos) || []);
     };
 
     getTodosFromStorage();
