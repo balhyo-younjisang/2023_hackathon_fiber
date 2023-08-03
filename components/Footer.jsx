@@ -32,7 +32,7 @@ export const Footer = ({ navigation }) => {
         </>
       )}
       <View style={styles.container}>
-        <NavIcon src={calenderIcon} navigation={navigation} href="Login" />
+        <NavIcon src={calenderIcon} navigation={navigation} href="Cal" />
         <NavIcon src={lunchIcon} navigation={navigation} href="Join" />
 
         <TouchableOpacity onPress={() => handleShowMoreIcon()}>
