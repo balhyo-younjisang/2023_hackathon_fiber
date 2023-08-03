@@ -13,11 +13,11 @@ export const LoginInput = (props) => {
 
 const styles = StyleSheet.create({
   loginInput: {
-    height: 60,
+    height: 50,
     width: 250,
-    margin: 10,
+    margin: 8,
     borderBottomWidth: 1,
-    padding: 10,
+    padding: 5,
     textAlign: "center",
     borderRadius: 5,
     fontFamily: "BlackHanSans",

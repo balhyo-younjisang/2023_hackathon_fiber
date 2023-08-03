@@ -2,15 +2,10 @@ import { View, StyleSheet, Text, TouchableOpacity, Image } from "react-native";
 import { useState } from "react";
 import { NavIcon } from "./NavIcon";
 import { MoreIcon } from "./MoreIconButton";
+import { ImagePath } from "../../utils/IconPath";
 
 export const Footer = ({ navigation }) => {
   const [showMoreIcon, setShowMoreIcon] = useState(false);
-
-  const calenderIcon = require("../assets/icons/Calender.png");
-  const lunchIcon = require("../assets/icons/lunch.png");
-  const calcIcon = require("../assets/icons/Calculator.png");
-  const todoIcon = require("../assets/icons/Todo.png");
-  const mainIcon = require("../assets/icons/Main.png");
 
   const handleShowMoreIcon = () => {
     setShowMoreIcon(!showMoreIcon);
@@ -21,28 +16,36 @@ export const Footer = ({ navigation }) => {
       {showMoreIcon && (
         <>
           <View style={styles.moreIconsContainer}>
-            <MoreIcon src={calenderIcon} navigation={navigation} />
+            <MoreIcon src={ImagePath.MIC} navigation={navigation} href="" />
             <MoreIcon
-              src={calenderIcon}
+              src={ImagePath.HOME}
               navigation={navigation}
-              marginBottom={20}
+              href="Home"
             />
-            <MoreIcon src={calenderIcon} navigation={navigation} />
+            <MoreIcon
+              src={ImagePath.SETTING}
+              navigation={navigation}
+              href="Setting"
+            />
           </View>
         </>
       )}
       <View style={styles.container}>
-        <NavIcon src={calenderIcon} navigation={navigation} href="Cal" />
-        <NavIcon src={lunchIcon} navigation={navigation} href="Join" />
+        <NavIcon
+          src={ImagePath.CALENDAR}
+          navigation={navigation}
+          href="Login"
+        />
+        <NavIcon src={ImagePath.LUNCH} navigation={navigation} href="Menu" />
 
         <TouchableOpacity onPress={() => handleShowMoreIcon()}>
           <View style={styles.circle}>
-            <Image source={mainIcon} />
+            <Image source={ImagePath.MAIN} />
           </View>
         </TouchableOpacity>
 
-        <NavIcon src={calcIcon} navigation={navigation} href="Join" />
-        <NavIcon src={todoIcon} navigation={navigation} href="Join" />
+        <NavIcon src={ImagePath.MAP} navigation={navigation} href="Map" />
+        <NavIcon src={ImagePath.POST} navigation={navigation} href="Join" />
       </View>
     </>
   );

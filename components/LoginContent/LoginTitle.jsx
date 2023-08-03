@@ -4,8 +4,8 @@ export const LoginTitle = () => {
   return (
     <>
       <View style={styles.titleContainer}>
-        <Image source={require("../assets/icons/LoginScreenIcon.png")} />
-        <Text style={styles.title}>하이바</Text>
+        <Image source={require("../../assets/icons/LoginScreenIcon.png")} />
+        {/* <Text style={styles.title}>하이바</Text> */}
         {/* <Text style={styles.title}>하이바</Text>
         <Text style={styles.slogan}>국군장병을 위한 모든 것</Text> */}
       </View>

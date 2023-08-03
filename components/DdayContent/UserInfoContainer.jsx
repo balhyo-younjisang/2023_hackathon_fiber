@@ -30,7 +30,7 @@ export const UserInfoContainer = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#DADADA",
+    backgroundColor: "#2D2D2D",
     width: "80%",
     height: 500,
     marginTop: 100,

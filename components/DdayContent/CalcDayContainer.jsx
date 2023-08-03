@@ -27,5 +27,6 @@ const styles = StyleSheet.create({
   currentDay: {
     fontFamily: "BlackOpsOne",
     fontSize: 18,
+    color: "white",
   },
 });

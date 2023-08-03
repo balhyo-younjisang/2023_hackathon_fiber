@@ -1,6 +1,6 @@
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
 import { useEffect, useState } from "react";
-import { loadingFont } from "../utils/LoadingFonts";
+import { loadingFont } from "../../utils/LoadingFonts";
 
 export const LoginButton = (props) => {
   const [isReady, setIsReady] = useState(false);

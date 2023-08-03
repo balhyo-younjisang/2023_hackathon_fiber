@@ -1,11 +1,11 @@
-import { ImagePath } from "../utils/IconPath";
+import { ImagePath } from "../../utils/IconPath";
 import { View, Image, StyleSheet } from "react-native";
 
 export const Weather = ({ path }) => {
   return (
     <>
       <View style={styles.weatherContainer}>
-        <Image source={ImagePath[path]}></Image>
+        <Image source={ImagePath[path]} style={{ tintColor: "white" }}></Image>
       </View>
     </>
   );

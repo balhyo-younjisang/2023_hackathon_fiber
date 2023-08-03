@@ -2,9 +2,11 @@ import { View, StyleSheet, Text } from "react-native";
 import { useState, useEffect } from "react";
 import { loadingFont } from "../utils/LoadingFonts";
 
-import { LoginTitle } from "../components/LoginTitle";
-import { LoginButton } from "../components/LoginButton";
-import { LoginInput } from "../components/LoginInput";
+import { signUp } from "../apis/auth";
+
+import { LoginTitle } from "../components/LoginContent/LoginTitle";
+import { LoginButton } from "../components/LoginContent/LoginButton";
+import { LoginInput } from "../components/LoginContent/LoginInput";
 
 export const Join = ({ navigation }) => {
   const [isReady, setIsReady] = useState(false);
@@ -12,10 +14,22 @@ export const Join = ({ navigation }) => {
   const [inputName, handleChangeName] = useState("");
   const [inputPassword, handleChangePassword] = useState("");
   const [inputConfirmPassword, handleChangeConfirmPassword] = useState("");
+  const [errorMsg, setErrorMsg] = useState();
 
   /** 회원가입 버튼을 클릭했을 때 작동하는 함수 */
-  const postJoin = () => {
-    console.log(inputEmail, inputPassword);
+  const postJoin = async () => {
+    if (inputPassword != inputConfirmPassword) return;
+
+    const signUpResult = await signUp(inputEmail, inputPassword, inputName);
+
+    if (signUpResult) {
+      setErrorMsg(signUpResult.data);
+      return;
+    }
+
+    handleChangePassword("");
+    handleChangeConfirmPassword("");
+
     navigation.navigate("Login");
   };
 
@@ -53,6 +67,7 @@ export const Join = ({ navigation }) => {
               value={inputConfirmPassword}
               security={true}
             />
+            {errorMsg && <Text style={styles.error}>{errorMsg}</Text>}
             <LoginButton title="회원가입" onClick={postJoin} />
             <Text
               onPress={() => navigation.navigate("Login")}
@@ -86,5 +101,9 @@ const styles = StyleSheet.create({
     fontFamily: "NanumPen",
     fontSize: 19,
     marginTop: 10,
+  },
+  error: {
+    fontFamily: "BlackHanSans",
+    color: "red",
   },
 });

@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     height: "50%",
-    borderBottomColor: "black",
+    borderBottomColor: "gray",
     borderBottomWidth: 2,
     // margin: 10,
     marginLeft: 10,
@@ -26,10 +26,12 @@ const styles = StyleSheet.create({
   dday: {
     fontFamily: "BlackOpsOne",
     fontSize: 60,
+    color: "white",
   },
 
   sub: {
     fontFamily: "BlackHanSans",
     fontSize: 20,
+    color: "white",
   },
 });

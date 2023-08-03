@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import { useState, useEffect } from "react";
 
-import { getWeatherAndReturnWeatherIconIdAndCity } from "../apis/weather";
+import { getWeatherAndReturnWeatherIconIdAndCity } from "../../apis/weather";
 import { Weather } from "./Weather";
 
 export const WeatherContainer = () => {
@@ -46,18 +46,20 @@ export const WeatherContainer = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#DADADA",
+    backgroundColor: "#0E3773",
     width: "80%",
     height: 190,
     marginTop: 100,
     alignSelf: "center",
     borderRadius: 5,
+    marginBottom: 30,
   },
 
   city: {
     fontFamily: "BlackHanSans",
     alignSelf: "center",
     fontSize: 18,
+    color: "white",
   },
 
   WeatherInfo: {
@@ -71,5 +73,6 @@ const styles = StyleSheet.create({
   InfoText: {
     fontFamily: "NanumPen",
     fontSize: 20,
+    color: "white",
   },
 });

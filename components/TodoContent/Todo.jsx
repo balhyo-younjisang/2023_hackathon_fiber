@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { ScrollView, StyleSheet, TextInput } from "react-native";
 
 import { TodoItem } from "./TodoItem";
-import { storeData, getData } from "../utils/asyncStorage";
+import { storeData, getData } from "../../utils/asyncStorage";
 
 export const Todo = () => {
   const [todos, setTodos] = useState([]);
@@ -52,6 +52,7 @@ export const Todo = () => {
           onSubmitEditing={handleSubmitTodo}
           onChangeText={setTodoInput}
           value={todoInput}
+          placeholderTextColor="#C0C0C0"
         />
       </ScrollView>
     </>
@@ -62,13 +63,13 @@ const styles = StyleSheet.create({
   addTodo: {
     height: 50,
     width: "90%",
-    backgroundColor: "gray",
+    backgroundColor: "white",
     marginTop: 5,
     borderRadius: 5,
     textAlign: "center",
     fontSize: 18,
     marginBottom: 10,
     alignSelf: "center",
-    color: "white",
+    color: "#C0C0C0",
   },
 });

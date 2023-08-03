@@ -1,5 +1,5 @@
 import { View, StyleSheet, Text, Image, TouchableOpacity } from "react-native";
-import { ImagePath } from "../utils/IconPath";
+import { ImagePath } from "../../utils/IconPath";
 
 //                        Todo 내용, Check 아이콘을 눌렀을 때 실행되는 이벤트, Todo 아이템의 인덱스
 export const TodoItem = ({ todo, onPressCheck, todoIdx }) => {
